@@ -1,0 +1,17 @@
+{% extends "companies/base.html" %}
+
+{% block content %}
+  
+    <h1>{{ company.name }}</h1>
+    <ul>
+    {% if company.address != "" %}
+        <li> {{ company.address }} </li>
+    {% endif %}
+    {% if company.phone_number != "" %}
+        <li> {{ company.phone_number }} </li>
+    {% endif %}
+    <li> {{ company.android_users }} </li>
+    </ul>
+    
+{% endblock %}
+      
