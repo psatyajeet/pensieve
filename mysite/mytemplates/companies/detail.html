@@ -3,15 +3,23 @@
 {% block content %}
   
     <h1>{{ company.name }}</h1>
-    <ul>
+
+<table class="table">
+    <tbody>
+    <tr><td> Address </td>
     {% if company.address != "" %}
-        <li> {{ company.address }} </li>
+        <td> {{ company.address }} </td>
     {% endif %}
+    </tr>
+    <tr><td> Phone Number: </td>
     {% if company.phone_number != "" %}
-        <li> {{ company.phone_number }} </li>
+        <td> {{ company.phone_number }} </td>
     {% endif %}
-    <li> {{ company.android_users }} </li>
-    </ul>
+    </tr>
+    <tr><td> Num. Android Users: </td> <td> {{ company.android_users }} </td></tr>
+     
+     </tbody>   
+</table>
     
 {% endblock %}
       
