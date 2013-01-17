@@ -3,7 +3,7 @@ from django.contrib import admin
 
 class CompanyAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'pub_date', 'address')
+    list_display = ('name', 'address')
     list_filter = ['name']
     search_fields = ['name']
     name_hierarchy = 'name'

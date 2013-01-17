@@ -19,6 +19,6 @@ class Company(models.Model):
     facebook_sentiment=models.IntegerField()
     facebook_messages=models.IntegerField()
     
-    pub_date = models.DateTimeField('date published')
+    #pub_date = models.DateTimeField('date published')
     def __unicode__(self):
         return self.name
