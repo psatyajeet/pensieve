@@ -1,5 +1,8 @@
 from companies.models import Company
 from django.contrib import admin
+from django.contrib import admin
+
+
 
 class CompanyAdmin(admin.ModelAdmin):
 
@@ -10,3 +13,5 @@ class CompanyAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Company, CompanyAdmin)
+
+
