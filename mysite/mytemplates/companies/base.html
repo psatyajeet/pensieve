@@ -47,8 +47,10 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
             <ul class="nav pull-right">
+            {# If user is not logged in, show login button in top-right #}
             {% if not request.user.is_authenticated %}
                 <li><a href="/login">Login</a></li>
+            {# Otherwise show logout button #}
             {% else %}
                 <li><a href="/logout">Logout</a></li>
             {% endif %}
