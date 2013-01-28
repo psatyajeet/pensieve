@@ -6,19 +6,29 @@
 
 <table class="table">
     <tbody>
-    <tr><td> Address </td>
     {% if company.address != "" %}
+    <tr><td> Address </td>
         <td> {{ company.address }} </td>
     {% endif %}
     </tr>
-    <tr><td> Phone Number: </td>
     {% if company.phone_number != "" %}
+    <tr><td> Phone Number: </td>
         <td> {{ company.phone_number }} </td>
     {% endif %}
     </tr>
+    {% if company.founding_date != "" %}
+    <tr><td> Founding Date: </td> <td> {{ company.founding_date }} </td></tr>
+    {% endif %} 
+    <tr><td> Global Alexa Rank: </td> <td> {{ company.alexa_rank_global }} </td></tr>
     <tr><td> Num. Android Users: </td> <td> {{ company.android_users }} </td></tr>
-     
-     </tbody>   
+    <tr><td> Android User Rating: </td> <td> {{ company.android_users_rating }} </td></tr>
+    <tr><td> Num. Twitter Followers: </td> <td> {{ company.twitter_followers }} </td></tr>
+    <tr><td> Twitter Positive Sentiment: </td> <td> {{ company.twitter_sentiment }} </td></tr>
+    <tr><td> Num. Tweets: </td> <td> {{ company.twitter_tweets }} </td></tr>
+    <tr><td> Num. Facebook Likes: </td> <td> {{ company.facebook_likes }} </td></tr>
+    <tr><td> Facebook Positive Sentiment: </td> <td> {{ company.facebook_sentiment }} </td></tr>
+    <tr><td> Num. Facebook Messages: </td> <td> {{ company.facebook_messages }} </td></tr>    
+    </tbody>   
 </table>
     
 {% endblock %}
