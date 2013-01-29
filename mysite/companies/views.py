@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.http import HttpResponseRedirect
 
+
 def index(request):
     # If not authenticated, redirect to a nonuser home page.
     if not request.user.is_authenticated():
@@ -13,7 +14,7 @@ def index(request):
         
     # If authenticated, show list of all companies
     company_list = Company.objects.all().order_by('name')
-    return render_to_response('companies/index.html', {'company_list': company_list})
+    return render_to_response('companies/index.html', {'company_list': company_list, 'user': request.user})
 
 def detail(request, company_id):
     if not request.user.is_authenticated():

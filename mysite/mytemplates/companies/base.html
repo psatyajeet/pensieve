@@ -47,13 +47,15 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
             <ul class="nav pull-right">
+                <li><a href="/login">My Profile</a></li>
                 {# If user is  logged in, show logout button in top-right #}
-                {% if request.user.is_authenticated %}
+                {% if user.is_authenticated %}
                     <li><a href="/logout">Logout</a></li>
                 {# Otherwise show login button #}
                 {% else %}
                     <li><a href="/login">Login</a></li>
                 {% endif %}
+                
             </ul>
           </div><!--/.nav-collapse -->
         </div>
