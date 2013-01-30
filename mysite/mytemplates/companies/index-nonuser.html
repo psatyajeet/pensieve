@@ -1,4 +1,4 @@
-{% extends "companies/base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 
@@ -9,7 +9,7 @@
       This is the home page for the Social Pensieve application.
     </h2>
 
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+    <a class="btn btn-primary" href="/signup">Sign up now!</a>
 </div>
   
 {% endblock %}
