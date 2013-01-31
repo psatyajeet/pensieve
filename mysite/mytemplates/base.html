@@ -42,12 +42,12 @@
           <a class="brand" href="/">Social Pensieve</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
+              <li class="active"><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
             <ul class="nav pull-right">
-                <li><a href="/login">My Profile</a></li>
+                <li><a href="/login"><i class="icon-user icon-gray"></i> My Profile</a></li>
                 {# If user is  logged in, show logout button in top-right #}
                 {% if user.is_authenticated %}
                     <li><a href="/logout">Logout</a></li>
