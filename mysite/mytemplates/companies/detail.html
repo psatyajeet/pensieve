@@ -4,8 +4,20 @@
   
     <h1>{{ company.name }}</h1>
 
-<table class="table">
+<br>
+
+<table class="table span3">
     <tbody>
+    {% for field, value in company.get_fields %}
+        {% if field != "ID" and field != "name" %}
+            {% if value != None and value != "" %}
+            <tr><td> {{ field }} </td> <td> {{ value }} </td> </tr>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    
+
+    <!--
     {% if company.address != "" %}
     <tr><td> Address </td>
         <td> {{ company.address }} </td>
@@ -27,7 +39,8 @@
     <tr><td> Num. Tweets: </td> <td> {{ company.twitter_tweets }} </td></tr>
     <tr><td> Num. Facebook Likes: </td> <td> {{ company.facebook_likes }} </td></tr>
     <tr><td> Facebook Positive Sentiment: </td> <td> {{ company.facebook_sentiment }} </td></tr>
-    <tr><td> Num. Facebook Messages: </td> <td> {{ company.facebook_messages }} </td></tr>    
+    <tr><td> Num. Facebook Messages: </td> <td> {{ company.facebook_messages }} </td></tr> 
+    -->   
     </tbody>   
 </table>
 
