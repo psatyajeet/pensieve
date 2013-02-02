@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if company_list %}
+    <table class="table">
+    <thead>
+    <th> Company Name </th>
+    <th> Total Funding </th>
+    <th> Founding Date </th>
+    <th> Benchmark Date </th>
+    <th> Global Alexa Rank </th>
+    <th> Android Users (#) </th>
+    <th> Avg. Android User Rating </th>
+    <th> Twitter Followers </th>
+    <th> Twitter Sentiment </th> 
+    <th> Number of Tweets </th>
+    <th> Facebook Likes </th>
+    <th> Facebook Sentiment </th>
+    <th> Facebook Messages </th>
+    </thead>
+    <tbody>
+    {% for company in company_list %} 
+    <tr>
+        <td><a href="/companies/{{ company.id }}/">{{ company.name }}</a></td>
+        <td>{{ company.total_funding }}</td>
+        <td>{{ company.founding_date }}</td>
+        <td>{{ company.benchmark_date }}</td>
+        <td>{{ company.alexa_rank_global }}</td>
+        <td>{{ company.android_users }}</td>
+        <td>{{ company.android_user_rating }}</td>
+        <td>{{ company.twitter_followers }}</td>
+        <td>{{ company.twitter_sentiment }}</td>
+        <td>{{ company.twitter_tweets }}</td>
+        <td>{{ company.facebook_likes }}</td>
+        <td>{{ company.facebook_sentiment }}</td>
+        <td>{{ company.facebook_messages }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% else %}
+    <p>No companies are available.</p>
+{% endif %}
+
+{% endblock %}
