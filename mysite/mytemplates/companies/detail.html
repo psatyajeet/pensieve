@@ -6,7 +6,7 @@
 
 <br>
 
-<table class="table span3">
+<table class="table table-bordered span3">
     <tbody>
     {% for field, value in company.get_fields %}
         {% if field != "ID" and field != "name" %}
@@ -16,7 +16,6 @@
         {% endif %}
     {% endfor %}
     
-
     <!--
     {% if company.address != "" %}
     <tr><td> Address </td>
