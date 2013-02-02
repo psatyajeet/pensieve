@@ -62,12 +62,16 @@ STATIC_ROOT = ''
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
+import os.path
+PROJECT_DIR = os.path.dirname(__file__) # this is not Django setting.
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/Users/satyajeetpal/Pensieve/mysite/static/',
+    # '/Users/satyajeetpal/Pensieve/mysite/static/',
+    os.path.join(PROJECT_DIR, "static"),
 )
 
 # List of finder classes that know how to find static files in
@@ -103,9 +107,12 @@ ROOT_URLCONF = 'mysite.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-import os.path
-PROJECT_DIR = os.path.dirname(__file__) # this is not Django setting.
+
 TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    # '/Users/satyajeetpal/Pensieve/mysite/mytemplates',
     os.path.join(PROJECT_DIR, "mytemplates"),
     # here you can add another templates directory if you wish.
 )
